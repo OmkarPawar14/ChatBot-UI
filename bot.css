@@ -1,4 +1,5 @@
 
+
 /* html, body {
     height: 100%;
     
@@ -48,7 +49,7 @@ body{
     width: max-content;
     height: max-content;
     align-items: flex-start;
-    animation: move 500ms linear 1ms infinite;;
+    animation: move 500ms linear 0ms infinite;;
     
 }
 
@@ -86,17 +87,19 @@ body{
     border-radius: 2px; */
 
     
-    background-color: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+    /* background-color: linear-gradient(326deg, #861657 0%, #ffa69e 74%); */
     line-height: 10px;
     font-size: 15px;
-    width: 21.2rem;
+    width: 20rem;
+    height: 1.9rem;
+    padding-top: 0.5rem;
     border-radius: 0.8rem;
     position: absolute;
-    bottom: 0.5rem;
-    left: 0.1rem;
-    margin-bottom: px;
+    bottom: 0.5rem; 
     overflow: auto;
-    outline: 3px solid transparent;
+    /* left: 0.1rem; */
+    /* margin-bottom: px; */
+    /* outline: 3px solid transparent; */
 
     
 }
@@ -108,9 +111,9 @@ body{
     background-image: linear-gradient(250deg, #f8ceec 0%, #a88beb 74%);
     border-radius: 10px;
     position:absolute;
-    right: 0;
+    right: 0.5rem;
     bottom: 0.55rem;
-    border-left: 5rem;
+    /* border-left: 5rem; */
    
     
 
