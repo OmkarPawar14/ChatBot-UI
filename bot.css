@@ -21,7 +21,7 @@ body{
 .Box{
     position: absolute;
     right: 30px;
-    bottom: 40px;
+    bottom: 60px;
     max-width: 400px;
     border-radius: 10px;
     height: 30rem;
@@ -29,7 +29,7 @@ body{
     padding: 0.5rem;
     background-color: #861657;
     background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
-    color: #515365;
+    /* color: #515365; */
     
     line-height: 20px;
     font-size: 17px;
@@ -38,6 +38,25 @@ body{
     
 }
 
+.showBot{
+    position: absolute;
+    height: 3rem;
+    width: 4rem;
+    right: 30px;
+    bottom: 10px;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: #861657;
+    background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+
+}
+
+.hideBot{
+    float: right;
+    background-color: #f8ceec;
+    background-image: linear-gradient(250deg, #f8ceec 0%, #a88beb 74%);
+    border-radius: 5px;
+}
 
 .message{
     color: black;
@@ -150,4 +169,8 @@ body{
         transform: translate(0,50px);
 
     }
+}
+
+.hidden{
+    display: none;
 }
