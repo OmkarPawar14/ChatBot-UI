@@ -1,176 +1,135 @@
+:root{
+  --fadeIn_fadeOut_transition_speed:300ms;
+  --chatBot_ZIndex:100; /*Z-Index to keep Chat Bot top of all other elements*/
+}
 
-
-/* html, body {
-    height: 100%;
-    
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 body{
-    width: 300px;
-    border: 15px solid bl;
-    padding: 50px;
-    margin: 20px;
-} */
-
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container{
+  position: absolute;
+  right: 30px; /*Right and bottom are set to position the chat bot window in the right-corner of the screen*/
+  bottom: 60px;
+  width: 450px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 5px #aaaaaa;  /*NOTICE: I have changed the box-shadow because first one wasn't working*/
+  background-color: dodgerblue;
+  border: 2px solid dodgerblue;       /*NOTICE: I have added border because it was difficult to identify text input field*/
+  transition: var(--fadeIn_fadeOut_transition_speed);
+  transition-property: opacity, background-color, transform ;
+  z-index: var(--chatBot_ZIndex);
+}
 .header{
-    text-align: center;
-    color: black;
-    font-size: 50px;
+  display: flex;                        /*NOTICE: to fit title as well as close button I have converted it to flex */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
-.Box{
-    position: absolute;
-    right: 30px;
-    bottom: 60px;
-    max-width: 400px;
-    border-radius: 10px;
-    height: 30rem;
-    width: 30rem;
-    padding: 0.5rem;
-    background-color: #861657;
-    background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
-    /* color: #515365; */
-    
-    line-height: 20px;
-    font-size: 17px;
-    font-weight: 500;
-
-    
-}
-
-.showBot{
-    position: absolute;
-    height: 3rem;
-    width: 4rem;
-    right: 30px;
-    bottom: 10px;
-    border-radius: 10px;
-    padding: 0.5rem;
-    background-color: #861657;
-    background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
-
+.header h1{
+  color: white;
+  padding: 15px;
 }
 
 .hideBot{
-    float: right;
-    background-color: #f8ceec;
-    background-image: linear-gradient(250deg, #f8ceec 0%, #a88beb 74%);
-    border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hideBot:hover{
+  background-color: blue;
+}
+
+.body{
+  flex: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 30px;
+  
 }
 
 .message{
-    color: black;
-    font-weight: 700px;
-    padding: 0.5rem;
-    border: solid 1.5px;
-    margin: 5px;
-    border-radius: 0.5rem;
-    width: max-content;
-    height: max-content;
-    align-items: flex-start;
-    animation: move 500ms linear 0ms infinite;;
-    
+  background-color: dodgerblue;
+  padding: 10px;
+  color: white;
+  width: fit-content;
+  border-radius: 10px;
+  margin-bottom: 15px; 
 }
 
-.reply{
-    color: black;
-    text-align: right;
-    padding: 0.5rem;
-    border : solid 1.5px;
-    margin: 5px;
-    border-radius: 5px;
-    align-items: flex-start;
-    width: max-content;
-    
-    
-    
-    
-    /*
-    color: black;
-    font-weight: 700px;
-    padding: 0.5rem;
-    border: solid 1.5px;
-    margin: 5px;
-    border-radius: 0.5rem;
-    width: max-content;
-    height: max-content; */
-} 
-
-.input {
-    /* font-size: 16px;
-   
-    padding: 0.25em 0.5em;
-    width: 10cm;
-    background-color: #fff;
-    border: 2px solid;
-    border-radius: 2px; */
-
-    
-    /* background-color: linear-gradient(326deg, #861657 0%, #ffa69e 74%); */
-    line-height: 10px;
-    font-size: 15px;
-    width: 20rem;
-    height: 1.9rem;
-    padding-top: 0.5rem;
-    border-radius: 0.8rem;
-    position: absolute;
-    bottom: 0.5rem; 
-    overflow: auto;
-    /* left: 0.1rem; */
-    /* margin-bottom: px; */
-    /* outline: 3px solid transparent; */
-
-    
+.user_message{
+  margin-left: auto;
+  background-color: white;
+  color: black;
 }
 
-#click{
-    height: 40px;
-    width: 1.7cm;
-    background-color: #f8ceec;
-    background-image: linear-gradient(250deg, #f8ceec 0%, #a88beb 74%);
-    border-radius: 10px;
-    position:absolute;
-    right: 0.5rem;
-    bottom: 0.55rem;
-    /* border-left: 5rem; */
-   
-    
-
-   
+.footer form{
+  display:flex;
+}
+form input{
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  font-size: 16px;
+}
+form button{
+  width: 100px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.container{
-    width:40px;
-    margin: 70px auto;
-    
+form button:hover{
+  background-color: blue;
 }
 
-.dot{
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    background-color: whitesmoke;
-    border-radius: 50%; 
-
-
+.showBot{
+  position: absolute;
+  right: 30px;  /*Right and bottom are set to position the chat bot window in the right-corner of the screen*/
+  bottom: 25px;
+  padding: 10px 40px 10px 37px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: dodgerblue;
+  color: #f8f8f8;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  cursor: pointer;
+  transition: var(--fadeIn_fadeOut_transition_speed);
+  transition-property: opacity, background-color, transform ;
+  z-index: var(--chatBot_ZIndex);
 }
-.dot1{
-    animation: jump-up 0.6s, 0.1s linear infinite;
-}   
-.dot2{
-    animation: jump-up 0.6s, 0.2s linear infinite;
-}   
-.dot3{
-    animation: jump-up 0.6s, 0.3s linear infinite;
-}   
 
- @keyframes jump-up{
-    50%{
-        transform: translate(0,50px);
-
-    }
+.showBot:hover{
+  background-color: blue;
 }
 
 .hidden{
-    display: none;
+  display: none;
 }
