@@ -2,39 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>chatbot</title>
-    <link rel="stylesheet" href="bot.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="bot.css">
+  <title>PYBOT</title>
 </head>
 
 <body>
-    <header class="header">AI Chatbot</header>
-    <div class="top"></div>
-
-    <div class="Box hidden">
-        <div class="botNav">
-            <button class="hideBot">X</button>
-        </div>
-        <div class="message">Hi</div>
-        <div class="message">I am Bot</div>
-
-        <div class="reply">Hello</div>
-        <div class="reply">I want your help </div>
-
-        <textarea class="input" placeholder="Chat With Me"></textarea>
-        <button id="click">Send</button>
-        <div class="container">
-            <div class="dot dot1"></div>
-            <div class="dot dot1"></div>
-            <div class="dot dot1"></div>
-        </div>
+  <div id="botWindow" class="container hidden">
+    <div class="header">
+      <h1>ChatBot</h1>
+      <button class="hideBot" type="button" onclick="hideBotFun()">X</button>
     </div>
-    <button class="showBot"><img src="./assets/icons/message-square.svg" alt="✉"></button>
+    <div class="body">
+      <p class="message">Hi! How can I help you ? </p>
+      <p class="message user_message">Hi</p>
+    </div>
+    <div class="footer">
+      <form>
+        <input type="text" name="">
+        <button> Send</button>
+      </form>
+    </div>
+  </div>
+  <button id="showBotbtn" class="showBot" type="button" onclick="showBotFun()">Chat</button>
 
-    <script src="./bot.js"></script>
+
+
+  <script src="./bot.js"></script>
 </body>
 
 </html>
